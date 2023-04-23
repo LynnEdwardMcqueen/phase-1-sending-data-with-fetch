@@ -42,9 +42,9 @@ describe( "submitData()", () => {
       .to.have.been.called.with( 'http://localhost:3000/users' );
     expect( window.fetch )
       .to.have.been.called.exactly( 1 );
-    expect( headers[ 'content-type' ][ 0 ] )
-      .to.equal( 'application/json' )
     expect( headers[ 'accept' ][ 0 ] )
+      .to.equal( 'application/json' )
+    expect( headers[ 'content-type' ][ 0 ] )
       .to.equal( 'application/json' )
     expect( Object.keys( reqBody ), "The request body should only have 'name' and 'email' key/value pairs" )
       .to.deep.equal( [ "name", "email" ] )

@@ -14,10 +14,9 @@ function submitData(userName, userEmail) {
     body: JSON.stringify(formData),
   };
     
-// This is the original code!  The return of the fetch was for the test.
-/*  fetch("http://localhost:3000/users", configurationObject)
-
-  .then(function (response) {
+  return fetch("http://localhost:3000/users", configurationObject)
+}
+/*  .then(function (response) {
     return response.json()
   })
   .then(function (object) {
@@ -25,20 +24,8 @@ function submitData(userName, userEmail) {
     createParagraph(object)
   })
   .catch(err => createErrorParagraph(err))
-}
-*/
-  return ( fetch("http://localhost:3000/users", configurationObject) 
-  .then(function (response) {
-    return response.json()
-  })
-  .then(function (object) {
-    // console.log(object)
-    createParagraph(object)
-  })
-  .catch(err => createErrorParagraph(err))
-  )
-}
-submitData("Sam", "sam@sam.com")
+} */
+submitData("Bill Johnson", "heritic@nutjob.com")
 .then(function (response) {
   return response.json()
 })
